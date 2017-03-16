@@ -39,7 +39,7 @@ function articles(data){
   
   </div>
 <div class="content">
-${contetn}
+${content}
 </div>
 </div>
 </body>

@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var articleName={
+var articles={
  articleOne:{
     title:  'Article One',
     header:    'Article One',
@@ -34,7 +34,7 @@ var articleName={
 };
 
 
-function articles(data){
+function createTemplate(data){
     var title=data.title;
     var header=data.header;
     var date=data.date;
@@ -78,7 +78,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:articleName',function(req,res){
-     res.send(articles(articleName));
+    var articleName=req.param.articleName;
+     res.send(createTemplate(article[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {

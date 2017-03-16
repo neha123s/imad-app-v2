@@ -13,6 +13,26 @@ var articleOne={
     
     
 };
+
+var articleTwo={
+    title:  'Article Two!',
+    header:    'Article Two',
+    date: '17th January,2017',
+    content :   `<p>This my Second article.This my Second article.This my Second article.This my Second article.This my Second article.This my Second article.This my Second article.</p> `
+    
+    
+};
+var articleThree={
+    title:  'Article Three!',
+    header:    'Article Three',
+    date: '27th January,2017',
+    content :   `<p>This my Third article.This my Third article.This my Third article.This my Third article.This my Third article.This my Third article.This my Third article.</p> `
+    
+    
+};
+
+
+
 function articles(data){
     var title=data.title;
     var header=data.header;
@@ -56,8 +76,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req,res){
-     res.send(articles(articleOne));
+app.get('/:articleName',function(req,res){
+     res.send(articles(articleName));
 });
 app.get('/article-two',function(req,res){
     res.send('This is article Two!');

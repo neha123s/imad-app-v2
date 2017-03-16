@@ -1,7 +1,8 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var articleOne={
+var articleName={
+ articleOne:{
     title:  'Article One',
     header:    'Article One',
     date: '5th January,2017',
@@ -12,25 +13,25 @@ var articleOne={
 <p>This my First article.This my First article.This my First article.This my First article.This my First article.This my First article.This my First article.</p> `
     
     
-};
+},
 
-var articleTwo={
+ articleTwo:{
     title:  'Article Two!',
     header:    'Article Two',
     date: '17th January,2017',
     content :   `<p>This my Second article.This my Second article.This my Second article.This my Second article.This my Second article.This my Second article.This my Second article.</p> `
     
     
-};
-var articleThree={
+},
+ articleThree:{
     title:  'Article Three!',
     header:    'Article Three',
     date: '27th January,2017',
     content :   `<p>This my Third article.This my Third article.This my Third article.This my Third article.This my Third article.This my Third article.This my Third article.</p> `
     
     
+}
 };
-
 
 
 function articles(data){
@@ -78,9 +79,6 @@ app.get('/', function (req, res) {
 
 app.get('/:articleName',function(req,res){
      res.send(articles(articleName));
-});
-app.get('/article-two',function(req,res){
-    res.send('This is article Two!');
 });
 
 app.get('/ui/style.css', function (req, res) {

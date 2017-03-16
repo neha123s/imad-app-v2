@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var articles={
- articleOne:{
+ 'article-one':{
     title:  'Article One',
     header:    'Article One',
     date: '5th January,2017',
@@ -15,7 +15,7 @@ var articles={
     
 },
 
- articleTwo:{
+ 'article-two':{
     title:  'Article Two!',
     header:    'Article Two',
     date: '17th January,2017',
@@ -23,7 +23,7 @@ var articles={
     
     
 },
- articleThree:{
+ 'article-three':{
     title:  'Article Three!',
     header:    'Article Three',
     date: '27th January,2017',

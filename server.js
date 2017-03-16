@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var articleOne={
     title:  'Article One',
-    heading:    'Article One',
+    header:    'Article One',
     date: '5th January,2017',
     content :   `<p>This my First article.This my First article.This my First article.This my First article.This my First article.This my First article.This my First article.</p>
 

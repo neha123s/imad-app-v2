@@ -19,7 +19,7 @@ var request=new XmlHttpRequest();
          if(request.status==200){
              var counter=request.responseText;
              var span=document.getElementById("count");
-             span.innerHtml=counter;
+             span.innerHtml=counter.toString();
          }
      }
  }

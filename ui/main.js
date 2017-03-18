@@ -23,7 +23,7 @@ var request=new XmlHttpRequest();
          }
      }
  }
- request.open('GET','http://neha123s.imad.hasura-app.io/',true);
+ request.open('GET','http://neha123s.imad.hasura-app.io/counter',true);
  request.send(null);
     
 }
